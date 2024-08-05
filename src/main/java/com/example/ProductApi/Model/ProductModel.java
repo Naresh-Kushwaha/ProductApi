@@ -1,13 +1,14 @@
 package com.example.ProductApi.Model;
 
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Product_Data")
 public class ProductModel {
     @Id
-    private int id;
+    private ObjectId id;
     private String imageUrl;
     private String brand;
     private String  title;
@@ -24,11 +25,11 @@ public class ProductModel {
         this.imageUrl = imageUrl;
     }
 
-    public int getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
