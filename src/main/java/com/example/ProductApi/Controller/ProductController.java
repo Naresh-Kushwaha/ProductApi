@@ -1,6 +1,6 @@
 package com.example.ProductApi.Controller;
 
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.ProductApi.Model.ProductModel;
 import com.example.ProductApi.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+    @CrossOrigin(origins = "http://localhost:5500")
 public class ProductController {
 
     @Autowired
